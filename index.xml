@@ -6,8 +6,36 @@
     <description>Recent content on isee15 Here</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 10 Oct 2016 11:56:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Oct 2016 14:50:31 +0800</lastBuildDate>
     <atom:link href="http://isee15.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>isee15 Here.努力就能有回报的事都算便宜</title>
+      <link>http://isee15.github.io/post/Readme/</link>
+      <pubDate>Mon, 10 Oct 2016 14:50:31 +0800</pubDate>
+      
+      <guid>http://isee15.github.io/post/Readme/</guid>
+      <description>&lt;p&gt;Welcome.&lt;/p&gt;
+
+&lt;p&gt;I try to write something to enjoy github:
+#Sqlite Viewer
+&lt;a href=&#34;https://github.com/isee15/Sqlite-Viewer&#34;&gt;https://github.com/isee15/Sqlite-Viewer&lt;/a&gt;
+&lt;a href=&#34;https://github.com/isee15/Sqlcipher-Viewer&#34;&gt;https://github.com/isee15/Sqlcipher-Viewer&lt;/a&gt;
+Just a simple sqlite database viewer.I need not to find browser plugin or full functional tool for only view a sqlite db. It also support db encrypted by sqlcipher. Sqlite Viewer&lt;/p&gt;
+
+&lt;p&gt;#Lunar Solar Calendar Converter
+&lt;a href=&#34;https://github.com/isee15/Lunar-Solar-Calendar-Converter&#34;&gt;https://github.com/isee15/Lunar-Solar-Calendar-Converter&lt;/a&gt;
+Chinese Lunar &amp;amp; Solar Converter from 1900-2100. Support C#,java,Objective-C,php,Python,javascript(nodejs),C/C++,ruby,swift. Lunar Solar Calendar Converter&lt;/p&gt;
+
+&lt;p&gt;#Clipboard Viewer
+&lt;a href=&#34;https://github.com/isee15/Clipboard-Viewer&#34;&gt;https://github.com/isee15/Clipboard-Viewer&lt;/a&gt;
+Clipboard Viewer for windows. It uses gac lib. Clipboard Viewer&lt;/p&gt;
+
+&lt;p&gt;#Mac Capture Screen
+&lt;a href=&#34;https://github.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac&#34;&gt;https://github.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac&lt;/a&gt;
+Capture Screen For Multi Screens On Mac Mac Capture Screen&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>mdcc2016</title>
