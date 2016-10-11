@@ -1,61 +1,125 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html>
 <html>
-	
-		<head>
-		<title>mdcc2016 - isee15 Here</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="">
-        <meta name="author" content="">
-		<meta name="keywords" content="">
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.16" />
+
+<link rel="apple-touch-icon" href="http://isee15.github.io/images/logo.png">
+
+
+<link rel="canonical" href="http://isee15.github.io/post/mdcc2016/">
+
+
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:400,700|Montserrat" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>mdcc2016 - isee15 Here</title>
+    
+<meta property="og:title" content="mdcc2016 - isee15 Here">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://isee15.github.io/post/mdcc2016/">
+<meta property="og:image" content="http://isee15.github.io/images/default.png">
+<meta property="og:site_name" content="isee15 Here">
+<meta property="og:description" content="参加了2天的MDCC2016，趁着10.1有空，回顾一下。 2天的会议主要参加了2个专场，跨平台开发专场和iOS开发峰会。 ##ppt地址 https://github.com/MDCC2016 跨平台开发专场 跨平台主要关注了ReactNative和Weex。 Weex目前看来还是阿里内部在用，ReactNative属于主流。 从RN的使用情况来看，都是在App中部分页面使用RN。对于RN使用中遇到的问题，美团点评的演讲介绍得比较详细，主要还是性能相关的优化。 ##从React到ReactNative渐进强化应用体验 主要讲了从Web应用改造为native应用的3种方式： 1. WebView嵌入(Hybrid)，通过WebViewBridge实现部分native增强 2. 将Web的ReactDOM改成ReactNative的组件，也就是现在的ReactNative的标准使用方式 3. 展望了一下ReactNative for Web的跨平台。由ReactNative直接提供iOS/Android/Web三个端复用的能力 比较来看，还是第二种方案更成熟，性能也更好 ##Mobile可配置化的跨平台实践 没有从客户端角度讲跨平台。而是利用服务端可配置化的控制平台，实现服务端快速上线和客户端产品的快速更新展现。 ##驱动原生型移动应用的跨平台实践 普元因为在Eclipse和组件化模型方面有很多积累，所以他们自己实现了一个类似ReactNative的技术，称为驱动原生型移动应用。 同时配合他们的IDE，可以有很好的调试体验。 但是因为这是普元的商业产品，这个主题一半可以当做他们的产品宣传。 ##Weex移动应用架构设计和实战 这个主题是跨平台开发专场中的亮点，开讲之前就在现场微信群里倍受期待，这也是这次大会上首次现场show code的嘉宾。 郑蔚(克爽)讲了Weex的分层架构，Native和Javascript的交互模型以及组件的渲染过程。 从架构和原理上，Weex和ReactNative差别并不大。 所以听众问了2个问题，Weex的开始和将来。 Weex的产生是因为原来淘宝的一套魔改Json加入脚本的方式难以维护，重构的时候正好Web技术比较成熟。实际Weex开始开发的时间比ReactNative还早，所以不存在有了ReactNative为什么还要造Weex的问题。 Weex的未来，首先会把接口层做得更薄，以后不只是可以用Vue.js来写Weex，甚至React.js也可以作为Weex的DSL。 同时有个不太好的消息是，淘宝在Weex的投入取决于淘宝自身业务的需要，所以Weex的未来还是看社区的推动情况。这个会让选择Weex变得很纠结，目前Weex的社区相对ReactNative还是相差太多。 ##美团点评 ReactNative 设计和实践 这个主题基本就是美团使用ReactNative的一些干货了，各种遇到的坑。 美团使用RN的目标是提升开发效率，缩短发布周期，解决版本不一致，资源不一致的问题。 然后张宇开始各种干货。 1. RN和native各自适用的场景 主要是性能相关的。 长列表(~1000条)，或者强交互的场景适合native，因为RN会产生深层的嵌套，以及列表本身的性能有问题。 而对于一些View数量比较少的UI，详情页，和交互较少的UI适合RN实现。 RN的热更新，美团采用了自己实现的一套。 2. 热更新 美团采用自己实现的一套 3. Navigator 踩了各种坑(事件穿透，原生表现不一致等)之后，推荐NavigationExperimental 4. ios和android样式自定义 用F8StyleSheet封装Platform.OS=== 5. ListView优化 主要是对没有显示的Cell的部分做一些优化，减少内存占用 6. bundle加载速度 放到一个bundle里面，内部路由 7. RN版本升级 升级需谨慎，api变化，采用阶段性升级，不追求最新版 把平台差异性代码放到组件里，业务代码保持平台独立性 iOS开发峰会 iOS峰会仿佛Swift开发峰会，OC已经没人讲了。但是对于Swift，台下问嘉宾，Swift3升级遇到问题怎么办，嘉宾说我们不升3，升2.3，哈哈哈。 ##Swift面向协议编程与Cocoa框架的邂逅 喵神讲了一下Swift里面新增加的协议扩展特性。 整个演讲主要是讲面向接口的设计方法。 Swift增加了协议扩展之后，能力已经跟多继承没有太大区别了。 ##展望 Isomorphic Swift 主持人都没太明白Isomorphic Swift是什么意思。 听完大概就是前后端都用Swift来实现。 主要介绍几个后端Swift框架，Kitura，Vapor，Perfect，Zewo。 从benchmark看，swift的性能表现比nodejs要好，仅次于go。 ##把玩编译器，Clang有意思 这个主题有点难。 孙源科普了一下llvm，clang的概念。 同时演示了一下clang与xcode结合使用的三种方式，实现code lint，以及利用AST做一些hack的事情。 ##IM 即时通讯技术在多应用场景下的技术实现，以及性能调优 leancloud的陈宜龙详细讲了IM的协议选择与性能优化，但是时间没安排好，导致部分内容没讲完。 干货也很多，基本涉及了IM中常遇到的一些问题。 1.">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="isee15 Here">
+<meta name="twitter:url" content="http://isee15.github.io/post/mdcc2016/">
+<meta name="twitter:title" content="mdcc2016 - isee15 Here">
+<meta name="twitter:description" content="参加了2天的MDCC2016，趁着10.1有空，回顾一下。 2天的会议主要参加了2个专场，跨平台开发专场和iOS开发峰会。 ##ppt地址 https://github.com/MDCC2016 跨平台开发专场 跨平台主要关注了ReactNative和Weex。 Weex目前看来还是阿里内部在用，ReactNative属于主流。 从RN的使用情况来看，都是在App中部分页面使用RN。对于RN使用中遇到的问题，美团点评的演讲介绍得比较详细，主要还是性能相关的优化。 ##从React到ReactNative渐进强化应用体验 主要讲了从Web应用改造为native应用的3种方式： 1. WebView嵌入(Hybrid)，通过WebViewBridge实现部分native增强 2. 将Web的ReactDOM改成ReactNative的组件，也就是现在的ReactNative的标准使用方式 3. 展望了一下ReactNative for Web的跨平台。由ReactNative直接提供iOS/Android/Web三个端复用的能力 比较来看，还是第二种方案更成熟，性能也更好 ##Mobile可配置化的跨平台实践 没有从客户端角度讲跨平台。而是利用服务端可配置化的控制平台，实现服务端快速上线和客户端产品的快速更新展现。 ##驱动原生型移动应用的跨平台实践 普元因为在Eclipse和组件化模型方面有很多积累，所以他们自己实现了一个类似ReactNative的技术，称为驱动原生型移动应用。 同时配合他们的IDE，可以有很好的调试体验。 但是因为这是普元的商业产品，这个主题一半可以当做他们的产品宣传。 ##Weex移动应用架构设计和实战 这个主题是跨平台开发专场中的亮点，开讲之前就在现场微信群里倍受期待，这也是这次大会上首次现场show code的嘉宾。 郑蔚(克爽)讲了Weex的分层架构，Native和Javascript的交互模型以及组件的渲染过程。 从架构和原理上，Weex和ReactNative差别并不大。 所以听众问了2个问题，Weex的开始和将来。 Weex的产生是因为原来淘宝的一套魔改Json加入脚本的方式难以维护，重构的时候正好Web技术比较成熟。实际Weex开始开发的时间比ReactNative还早，所以不存在有了ReactNative为什么还要造Weex的问题。 Weex的未来，首先会把接口层做得更薄，以后不只是可以用Vue.js来写Weex，甚至React.js也可以作为Weex的DSL。 同时有个不太好的消息是，淘宝在Weex的投入取决于淘宝自身业务的需要，所以Weex的未来还是看社区的推动情况。这个会让选择Weex变得很纠结，目前Weex的社区相对ReactNative还是相差太多。 ##美团点评 ReactNative 设计和实践 这个主题基本就是美团使用ReactNative的一些干货了，各种遇到的坑。 美团使用RN的目标是提升开发效率，缩短发布周期，解决版本不一致，资源不一致的问题。 然后张宇开始各种干货。 1. RN和native各自适用的场景 主要是性能相关的。 长列表(~1000条)，或者强交互的场景适合native，因为RN会产生深层的嵌套，以及列表本身的性能有问题。 而对于一些View数量比较少的UI，详情页，和交互较少的UI适合RN实现。 RN的热更新，美团采用了自己实现的一套。 2. 热更新 美团采用自己实现的一套 3. Navigator 踩了各种坑(事件穿透，原生表现不一致等)之后，推荐NavigationExperimental 4. ios和android样式自定义 用F8StyleSheet封装Platform.OS=== 5. ListView优化 主要是对没有显示的Cell的部分做一些优化，减少内存占用 6. bundle加载速度 放到一个bundle里面，内部路由 7. RN版本升级 升级需谨慎，api变化，采用阶段性升级，不追求最新版 把平台差异性代码放到组件里，业务代码保持平台独立性 iOS开发峰会 iOS峰会仿佛Swift开发峰会，OC已经没人讲了。但是对于Swift，台下问嘉宾，Swift3升级遇到问题怎么办，嘉宾说我们不升3，升2.3，哈哈哈。 ##Swift面向协议编程与Cocoa框架的邂逅 喵神讲了一下Swift里面新增加的协议扩展特性。 整个演讲主要是讲面向接口的设计方法。 Swift增加了协议扩展之后，能力已经跟多继承没有太大区别了。 ##展望 Isomorphic Swift 主持人都没太明白Isomorphic Swift是什么意思。 听完大概就是前后端都用Swift来实现。 主要介绍几个后端Swift框架，Kitura，Vapor，Perfect，Zewo。 从benchmark看，swift的性能表现比nodejs要好，仅次于go。 ##把玩编译器，Clang有意思 这个主题有点难。 孙源科普了一下llvm，clang的概念。 同时演示了一下clang与xcode结合使用的三种方式，实现code lint，以及利用AST做一些hack的事情。 ##IM 即时通讯技术在多应用场景下的技术实现，以及性能调优 leancloud的陈宜龙详细讲了IM的协议选择与性能优化，但是时间没安排好，导致部分内容没讲完。 干货也很多，基本涉及了IM中常遇到的一些问题。 1.">
+<meta name="twitter:image" content="http://isee15.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"http:\/\/isee15.github.io\/"
+    },
+    "headline": "mdcc2016 - isee15 Here",
+    "image": {
+      "@type": "ImageObject",
+      "url": "http:\/\/isee15.github.io\/images\/default.png",
+      "height": 700,
+      "width": 700
+    },
+    "datePublished": "2016-10-10T11:56:12JST",
+    "dateModified": "2016-10-10T11:56:12JST",
+    "author": {
+      "@type": "Person",
+      "name": "isee15 Here",
+      "image": "http:\/\/isee15.github.io\/images/logo.png"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "isee15 Here",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http:\/\/isee15.github.io\/images/logo.png",
+        "height": 60,
+        "width": 60
+      }
+    },
+    "description": "参加了2天的MDCC2016，趁着10.1有空，回顾一下。 2天的会议主要参加了2个专场，跨平台开发专场和iOS开发峰会。 ##ppt地址 https:\/\/github.com\/MDCC2016 跨平台开发专场 跨平台主要关注了ReactNative和Weex。 Weex目前看来还是阿里内部在用，ReactNative属于主流。 从RN的使用情况来看，都是在App中部分页面使用RN。对于RN使用中遇到的问题，美团点评的演讲介绍得比较详细，主要还是性能相关的优化。 ##从React到ReactNative渐进强化应用体验 主要讲了从Web应用改造为native应用的3种方式： 1. WebView嵌入(Hybrid)，通过WebViewBridge实现部分native增强 2. 将Web的ReactDOM改成ReactNative的组件，也就是现在的ReactNative的标准使用方式 3. 展望了一下ReactNative for Web的跨平台。由ReactNative直接提供iOS\/Android\/Web三个端复用的能力 比较来看，还是第二种方案更成熟，性能也更好 ##Mobile可配置化的跨平台实践 没有从客户端角度讲跨平台。而是利用服务端可配置化的控制平台，实现服务端快速上线和客户端产品的快速更新展现。 ##驱动原生型移动应用的跨平台实践 普元因为在Eclipse和组件化模型方面有很多积累，所以他们自己实现了一个类似ReactNative的技术，称为驱动原生型移动应用。 同时配合他们的IDE，可以有很好的调试体验。 但是因为这是普元的商业产品，这个主题一半可以当做他们的产品宣传。 ##Weex移动应用架构设计和实战 这个主题是跨平台开发专场中的亮点，开讲之前就在现场微信群里倍受期待，这也是这次大会上首次现场show code的嘉宾。 郑蔚(克爽)讲了Weex的分层架构，Native和Javascript的交互模型以及组件的渲染过程。 从架构和原理上，Weex和ReactNative差别并不大。 所以听众问了2个问题，Weex的开始和将来。 Weex的产生是因为原来淘宝的一套魔改Json加入脚本的方式难以维护，重构的时候正好Web技术比较成熟。实际Weex开始开发的时间比ReactNative还早，所以不存在有了ReactNative为什么还要造Weex的问题。 Weex的未来，首先会把接口层做得更薄，以后不只是可以用Vue.js来写Weex，甚至React.js也可以作为Weex的DSL。 同时有个不太好的消息是，淘宝在Weex的投入取决于淘宝自身业务的需要，所以Weex的未来还是看社区的推动情况。这个会让选择Weex变得很纠结，目前Weex的社区相对ReactNative还是相差太多。 ##美团点评 ReactNative 设计和实践 这个主题基本就是美团使用ReactNative的一些干货了，各种遇到的坑。 美团使用RN的目标是提升开发效率，缩短发布周期，解决版本不一致，资源不一致的问题。 然后张宇开始各种干货。 1. RN和native各自适用的场景 主要是性能相关的。 长列表(~1000条)，或者强交互的场景适合native，因为RN会产生深层的嵌套，以及列表本身的性能有问题。 而对于一些View数量比较少的UI，详情页，和交互较少的UI适合RN实现。 RN的热更新，美团采用了自己实现的一套。 2. 热更新 美团采用自己实现的一套 3. Navigator 踩了各种坑(事件穿透，原生表现不一致等)之后，推荐NavigationExperimental 4. ios和android样式自定义 用F8StyleSheet封装Platform.OS=== 5. ListView优化 主要是对没有显示的Cell的部分做一些优化，减少内存占用 6. bundle加载速度 放到一个bundle里面，内部路由 7. RN版本升级 升级需谨慎，api变化，采用阶段性升级，不追求最新版 把平台差异性代码放到组件里，业务代码保持平台独立性 iOS开发峰会 iOS峰会仿佛Swift开发峰会，OC已经没人讲了。但是对于Swift，台下问嘉宾，Swift3升级遇到问题怎么办，嘉宾说我们不升3，升2.3，哈哈哈。 ##Swift面向协议编程与Cocoa框架的邂逅 喵神讲了一下Swift里面新增加的协议扩展特性。 整个演讲主要是讲面向接口的设计方法。 Swift增加了协议扩展之后，能力已经跟多继承没有太大区别了。 ##展望 Isomorphic Swift 主持人都没太明白Isomorphic Swift是什么意思。 听完大概就是前后端都用Swift来实现。 主要介绍几个后端Swift框架，Kitura，Vapor，Perfect，Zewo。 从benchmark看，swift的性能表现比nodejs要好，仅次于go。 ##把玩编译器，Clang有意思 这个主题有点难。 孙源科普了一下llvm，clang的概念。 同时演示了一下clang与xcode结合使用的三种方式，实现code lint，以及利用AST做一些hack的事情。 ##IM 即时通讯技术在多应用场景下的技术实现，以及性能调优 leancloud的陈宜龙详细讲了IM的协议选择与性能优化，但是时间没安排好，导致部分内容没讲完。 干货也很多，基本涉及了IM中常遇到的一些问题。 1."
+  }
+</script>
+
+
+    <style>
+      html { font-size: 18px;}@media (max-width: 768px) { html { font-size: 15px; }}body { font-family: 'Noto Sans','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-size: inherit; font-weight: 300; line-height: 1rem; background-color: #eceff1;}p { margin: 0;}a { color: #4caf50;}a:hover { text-decoration: none; color: #388e3c;}ul,ol { margin: 0; padding: 0;}h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 700;}h1 { font-size: 1.8rem; line-height: 2rem; margin: 1.5rem 0; }h2 { font-size: 1.4rem; line-height: 2rem; margin: 1.5rem 0; }h3 { font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; }h4, h5, h6 { font-size: 1rem; line-height: 1.5rem; margin: 1.5rem 0; }main { display: block;}.content-inner { padding: 1rem 2rem;}.content-inner.thin { padding: .5rem 1rem;}@media (max-width: 768px) { .content-inner { padding: 1rem; }}/* Override */.container { position: relative;}/* Parts:layouts */.l-header { background-color: #fff; margin-bottom: 1rem; padding: 1rem 0; text-align: center;}.l-footer { font-size: .8rem; padding: 1.5rem 0;}/* Parts:menu */.p-menu { position: absolute; right: 15px; top: 0;}/* Parts:terms */.p-terms { list-style: none;}.p-terms .terms-title { margin: 0;}.p-terms a { display: inline-block; padding: .25rem 0;}.p-terms.inline li { display: inline-block; font-size: .8rem;}.p-terms.inline li::after { content: ',';}.p-terms.inline li:last-child::after { content: '';}/* Parts:paging */.p-paging { margin-bottom: 1.5rem; text-align: center;}.p-paging a { display: inline-block; padding: 1rem 1.5rem; margin: 0 .5rem; background-color: #cfd8dc; color: #263238;}/* Parts:section */section { margin-bottom: 1.5rem;}section>header { font-size: .8rem; font-weight: 700; margin-bottom: .5rem; text-transform: uppercase;}section>header a { color: #333; text-decoration: underline;}section.article-footer { margin-bottom: 1rem;}section.article-footer>header { margin-bottom: 0;}/* Parts:logo */.p-logo { display: inline-block; font-family: 'Montserrat', sans-serif; text-transform: uppercase;}.p-logo a { display: inline-block; font-size: 1.4rem; line-height: 2rem; color: #000;}/* Parts:crumb */.p-crumb ol { list-style: none; margin-bottom: 1rem;}.p-crumb li { display: inline; margin-right: .25rem; font-size: .8rem; color: #607d8b;}.p-crumb li::after { content: '/'; margin-left: .25rem;}.p-crumb li:last-child::after { content: '';}/* Parts:facts */.p-facts { list-style: none; font-size: .8rem; margin-bottom: 1rem;}.p-facts li { display: inline-block; margin-right: .5rem; color: #90a4ae;}.p-facts li i { margin-right: .5rem; color: #cfd8dc;}/* Parts:article */article { background-color: #fff;}article .title { margin: 0; margin-bottom: .5rem; font-weight: 700;}article .title a { color: #000;}article .thumb { display: block; background-image: url(http://isee15.github.io/images/default.jpg); background-position: center; background-size: cover;}article .summary { margin-bottom: .5rem; max-height: 5rem; overflow: hidden;}article.single .thumb { height: 18rem;}@media (max-width: 768px) { article.single .thumb { height: 12rem; }}article.li { margin-bottom: 1rem;}article.li .thumb { height: 7.5rem; margin-bottom: .5rem;}article.li.sm { background-color: transparent; margin-bottom: .5rem;}article.li.sm>header { padding: .5rem 0;}article.li.sm .title { font-size: .8rem; line-height: 1rem; margin-bottom: .25rem;}article.li.sm .p-facts { font-size: .6rem; margin-bottom: 0;}article.li.sm .thumb { float: left; margin-right: .5rem; height: 3rem; width: 3rem;}.article-body h2 { padding: 1rem 0; border-bottom: 2px solid #eceff1;}.article-body h2:first-child { margin-top: 0; }.article-body h3 { color: #428bca;}.article-body h4 { border-left: solid .25rem #428bca; padding: 0 .5rem;}.article-body p { margin: 1.5rem 0; line-height: 1.5rem;}.article-body a { text-decoration: underline;}.article-body ul,.article-body ol { padding-left: 1.5rem;}.article-body code { display: inline-block; font-family: Menlo, consolas, monospace; font-size: .8rem; padding: 0 .5rem; line-height: 1.5rem;}.article-body pre { margin: 1.5rem 0; padding: 0; font-size: .8rem; border: none; border-radius: 0;}.article-body pre code { display: block; line-height: 1rem; padding: 1rem;}.article-body blockquote { margin: 1.5rem 0; padding: .5rem 0; font-size: .8rem; border-top: 1px solid #eceff1; border-bottom: 1px solid #eceff1; color: #607d8b;}.article-body blockquote p { margin: .5rem 0; line-height: 1rem;}.article-body strong { box-shadow: 0 -.5rem 0 0 #90caf9 inset;}.article-body em { font-style: normal; font-weight: 700; color: #03a9f4;}.article-body figure { margin: 1.5rem 0; }.article-body figure img { max-width: 100%; }.article-body figure.left,.article-body figure.right { width: 15rem; height: 12rem; margin-top: 0;}.article-body figure.left { float: left; margin-right: 1rem; }.article-body figure.right { float: right; margin-left: 1rem; }@media (max-width: 768px) { .article-body figure.left, .article-body figure.right { float: none; margin: 0; width: auto; height: auto; }}.article-body figcaption { padding: .5rem 0; font-size: .8rem; text-align: center;}.article-body figcaption a { color: #263238;}
+    </style>
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <div class="container">
+        <div class="p-logo">
+          <a href="http://isee15.github.io/">isee15 Here</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
         
-		<link rel="stylesheet" href="http://isee15.github.io/assets/css/main-red.css" />
-		
-		<link rel="icon" type="image/ico" href="http://isee15.github.io/images/favicon-16x16.ico" sizes="16x16" />
-		
-	</head>
+<div class="row">
+  <div class="col-md-8">
 
-	
-	<body>
+    <nav class="p-crumb">
+      <ol>
+        <li><a href="http://isee15.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://isee15.github.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">mdcc2016</li>
+      </ol>
+    </nav>
 
-		
-			
-						<section id="header">
-				<header>
-					<span class="image avatar"><a href="http://isee15.github.io/"><img src="http://isee15.github.io/images/avatar.jpg" alt="" /></a></span>
-					<h1 id="logo"><a href="http://isee15.github.io/"></a></h1>
-					<p></p>
-				</header>
-				<nav id="nav">
-					<ul>
-						
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						
-					</ul>
-				</footer>
-			</section>
+    <article class="single">
 
-			
-		
-			<div id="wrapper">
-		
-			<div id="main">
-						
-				<section>
-					<div class="container">
-						<header class="major">
-							<h2>mdcc2016</h2>
-							<p>10 October 2016</p>
-														<ul class="actions small">
-							
-							
-							</ul>
-						</header>
-						
+  <a href="http://isee15.github.io/post/mdcc2016/" class="thumb"></a>
+  <div class="content-inner">
+    <h1 class="title">mdcc2016</h1>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-10-10T11:56:12JST">Oct 10, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://isee15.github.io/post/">post</a></li>
+      
+    </ul>
+
+    <div class="article-body">
 
 <p>参加了2天的MDCC2016，趁着10.1有空，回顾一下。
 2天的会议主要参加了2个专场，跨平台开发专场和iOS开发峰会。</p>
@@ -199,38 +263,119 @@ lint，以及利用AST做一些hack的事情。</p>
 不过问嘉宾怎么在客户端存密码的时候，keychain依然是优先安全的方案。
 听完感觉开发者首先要更新自己的一些知识库，特别是有些传统加密算法因为发现有漏洞，已经被一些安全性更高的算法替代了，然后要有一些安全的常识，因为安全上有些问题如果你不知道，那就真的不知道。</p>
 </blockquote>
+</div>
+  </div>
 
-						
-						<ul class="actions">
-							
-							
-								<li><a href="http://isee15.github.io/post/Readme/" class="button special">Newer</a></li>
-							
-						</ul>
-						
-					</div>
-				</section>
-				
-			</div>
+  <footer class="article-footer">
+    <div class="content-inner">
 
-								<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>2016 &copy; </li>
-							</ul>
-						</div>
-					</section>
+      <nav class="p-crumb">
+        <ol>
+          <li><a href="http://isee15.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+          
+          <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://isee15.github.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+          
+          <li class="active">mdcc2016</li>
+        </ol>
+      </nav>
 
-			</div>
+      
+      
+      
+      
+      
+      
+    </div>
+  </footer>
 
-		
-					<script src="http://isee15.github.io/assets/js/jquery.min.js"></script>
-			<script src="http://isee15.github.io/assets/js/jquery.scrollzer.min.js"></script>
-			<script src="http://isee15.github.io/assets/js/jquery.scrolly.min.js"></script>
-			<script src="http://isee15.github.io/assets/js/skel.min.js"></script>
-			<script src="http://isee15.github.io/assets/js/util.js"></script>
-			
-			<script src="http://isee15.github.io/assets/js/main.js"></script>
+</article>
 
-	</body>
+
+    
+  </div>
+
+  <div class="col-md-4">
+    <aside class="site">
+
+  <section>
+    <header>latests</header>
+    <div>
+      <div class="row">
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://isee15.github.io/post/Readme/" class="thumb"></a>
+  <header>
+    <div class="title"><a href="http://isee15.github.io/post/Readme/">isee15 Here.努力就能有回报的事都算便宜</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-10-10T14:50:31JST">Oct 10, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://isee15.github.io/post/">post</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        
+        
+        <div class="col-md-12 col-sm-6 col-xs-12"><article class="li sm">
+  <a href="http://isee15.github.io/post/mdcc2016/" class="thumb"></a>
+  <header>
+    <div class="title"><a href="http://isee15.github.io/post/mdcc2016/">mdcc2016</a></div>
+
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-10-10T11:56:12JST">Oct 10, 2016</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="http://isee15.github.io/post/">post</a></li>
+    </ul>
+  </header>
+</article>
+</div>
+        <div class="col-sm-12"></div>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <header>category</header>
+    <div>
+      <ul class="p-terms">
+        
+      </ul>
+    </div>
+  </section>
+  
+  <section>
+    <header>tag</header>
+    <div>
+      <ul class="p-terms">
+        
+      </ul>
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; isee15 Here</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
+
