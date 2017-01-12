@@ -6,40 +6,187 @@
     <description>Recent content in Posts on 努力就能有回报的事都算便宜</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Jan 2017 19:28:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Oct 2016 14:50:31 +0800</lastBuildDate>
     <atom:link href="http://isee15.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>isee15 here</title>
-      <link>http://isee15.github.io/post/welcome/</link>
-      <pubDate>Tue, 10 Jan 2017 19:28:19 +0800</pubDate>
+      <title>isee15 Here.努力就能有回报的事都算便宜</title>
+      <link>http://isee15.github.io/post/Readme/</link>
+      <pubDate>Mon, 10 Oct 2016 14:50:31 +0800</pubDate>
       
-      <guid>http://isee15.github.io/post/welcome/</guid>
-      <description>&lt;p&gt;#Welcome.&lt;/p&gt;
+      <guid>http://isee15.github.io/post/Readme/</guid>
+      <description>&lt;p&gt;Welcome.&lt;/p&gt;
 
-&lt;p&gt;I try to write something to enjoy github:&lt;/p&gt;
+&lt;p&gt;I try to write something to enjoy github:
+#Sqlite Viewer
+&lt;a href=&#34;https://github.com/isee15/Sqlite-Viewer&#34;&gt;https://github.com/isee15/Sqlite-Viewer&lt;/a&gt;
+&lt;a href=&#34;https://github.com/isee15/Sqlcipher-Viewer&#34;&gt;https://github.com/isee15/Sqlcipher-Viewer&lt;/a&gt;
+Just a simple sqlite database viewer.I need not to find browser plugin or full functional tool for only view a sqlite db. It also support db encrypted by sqlcipher. Sqlite Viewer&lt;/p&gt;
 
-&lt;p&gt;#Sqlite Viewer&lt;/p&gt;
+&lt;p&gt;#Lunar Solar Calendar Converter
+&lt;a href=&#34;https://github.com/isee15/Lunar-Solar-Calendar-Converter&#34;&gt;https://github.com/isee15/Lunar-Solar-Calendar-Converter&lt;/a&gt;
+Chinese Lunar &amp;amp; Solar Converter from 1900-2100. Support C#,java,Objective-C,php,Python,javascript(nodejs),C/C++,ruby,swift. Lunar Solar Calendar Converter&lt;/p&gt;
 
-&lt;p&gt;Just a simple sqlite database viewer.I need not to find browser plugin or full functional tool for only view a sqlite db. It also support db encrypted by sqlcipher.
-&lt;a href=&#34;https://github.com/isee15/Sqlite-Viewer&#34;&gt;Sqlite Viewer&lt;/a&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/isee15/Sqlite-Viewer/master/snapshot.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;#Clipboard Viewer
+&lt;a href=&#34;https://github.com/isee15/Clipboard-Viewer&#34;&gt;https://github.com/isee15/Clipboard-Viewer&lt;/a&gt;
+Clipboard Viewer for windows. It uses gac lib. Clipboard Viewer&lt;/p&gt;
 
-&lt;p&gt;#Lunar Solar Calendar Converter&lt;/p&gt;
+&lt;p&gt;#Mac Capture Screen
+&lt;a href=&#34;https://github.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac&#34;&gt;https://github.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac&lt;/a&gt;
+Capture Screen For Multi Screens On Mac Mac Capture Screen&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mdcc2016</title>
+      <link>http://isee15.github.io/post/mdcc2016/</link>
+      <pubDate>Mon, 10 Oct 2016 11:56:12 +0800</pubDate>
+      
+      <guid>http://isee15.github.io/post/mdcc2016/</guid>
+      <description>
 
-&lt;p&gt;Chinese Lunar &amp;amp; Solar Converter from 1900-2100. Support C#,java,Objective-C,php,Python,javascript(nodejs),C/C++,ruby,swift. &lt;a href=&#34;https://github.com/isee15/Lunar-Solar-Calendar-Converter&#34;&gt;Lunar Solar Calendar Converter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参加了2天的MDCC2016，趁着10.1有空，回顾一下。
+2天的会议主要参加了2个专场，跨平台开发专场和iOS开发峰会。&lt;/p&gt;
 
-&lt;p&gt;#Clipboard Viewer&lt;/p&gt;
+&lt;p&gt;##ppt地址
+&lt;a href=&#34;https://github.com/MDCC2016&#34;&gt;https://github.com/MDCC2016&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Clipboard Viewer for windows. It uses gac lib.
-&lt;a href=&#34;https://github.com/isee15/Clipboard-Viewer&#34;&gt;Clipboard Viewer&lt;/a&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/isee15/Clipboard-Viewer/master/QQ%E6%88%AA%E5%9B%BE20150118191158.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;跨平台开发专场&#34;&gt;跨平台开发专场&lt;/h1&gt;
 
-&lt;p&gt;#Mac Capture Screen&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Capture Screen For Multi Screens On Mac Mac Capture Screen
-&lt;a href=&#34;https://github.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac&#34;&gt;Mac Capture Screen&lt;/a&gt;
-&lt;img src=&#34;https://raw.githubusercontent.com/isee15/Capture-Screen-For-Multi-Screens-On-Mac/master/QQ20150228-1@2x.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;跨平台主要关注了ReactNative和Weex。
+Weex目前看来还是阿里内部在用，ReactNative属于主流。
+从RN的使用情况来看，都是在App中部分页面使用RN。对于RN使用中遇到的问题，美团点评的演讲介绍得比较详细，主要还是性能相关的优化。&lt;/p&gt;
+
+&lt;p&gt;##从React到ReactNative渐进强化应用体验&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;主要讲了从Web应用改造为native应用的3种方式：
+1. WebView嵌入(Hybrid)，通过WebViewBridge实现部分native增强
+2. 将Web的ReactDOM改成ReactNative的组件，也就是现在的ReactNative的标准使用方式
+3. 展望了一下ReactNative for Web的跨平台。由ReactNative直接提供iOS/Android/Web三个端复用的能力 比较来看，还是第二种方案更成熟，性能也更好&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##Mobile可配置化的跨平台实践&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;没有从客户端角度讲跨平台。而是利用服务端可配置化的控制平台，实现服务端快速上线和客户端产品的快速更新展现。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##驱动原生型移动应用的跨平台实践&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;普元因为在Eclipse和组件化模型方面有很多积累，所以他们自己实现了一个类似ReactNative的技术，称为驱动原生型移动应用。
+同时配合他们的IDE，可以有很好的调试体验。 但是因为这是普元的商业产品，这个主题一半可以当做他们的产品宣传。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##Weex移动应用架构设计和实战&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这个主题是跨平台开发专场中的亮点，开讲之前就在现场微信群里倍受期待，这也是这次大会上首次现场show code的嘉宾。
+郑蔚(克爽)讲了Weex的分层架构，Native和Javascript的交互模型以及组件的渲染过程。
+从架构和原理上，Weex和ReactNative差别并不大。 所以听众问了2个问题，Weex的开始和将来。
+Weex的产生是因为原来淘宝的一套魔改Json加入脚本的方式难以维护，重构的时候正好Web技术比较成熟。实际Weex开始开发的时间比ReactNative还早，所以不存在有了ReactNative为什么还要造Weex的问题。
+Weex的未来，首先会把接口层做得更薄，以后不只是可以用Vue.js来写Weex，甚至React.js也可以作为Weex的DSL。
+同时有个不太好的消息是，淘宝在Weex的投入取决于淘宝自身业务的需要，所以Weex的未来还是看社区的推动情况。这个会让选择Weex变得很纠结，目前Weex的社区相对ReactNative还是相差太多。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##美团点评 ReactNative 设计和实践&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这个主题基本就是美团使用ReactNative的一些干货了，各种遇到的坑。
+美团使用RN的目标是提升开发效率，缩短发布周期，解决版本不一致，资源不一致的问题。 然后张宇开始各种干货。
+1. RN和native各自适用的场景 主要是性能相关的。 长列表(~1000条)，或者强交互的场景适合native，因为RN会产生深层的嵌套，以及列表本身的性能有问题。
+而对于一些View数量比较少的UI，详情页，和交互较少的UI适合RN实现。 RN的热更新，美团采用了自己实现的一套。
+2. 热更新 美团采用自己实现的一套
+3. Navigator 踩了各种坑(事件穿透，原生表现不一致等)之后，推荐NavigationExperimental
+4. ios和android样式自定义 用F8StyleSheet封装Platform.OS===
+5. ListView优化 主要是对没有显示的Cell的部分做一些优化，减少内存占用
+6. bundle加载速度 放到一个bundle里面，内部路由
+7. RN版本升级 升级需谨慎，api变化，采用阶段性升级，不追求最新版 把平台差异性代码放到组件里，业务代码保持平台独立性&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;ios开发峰会&#34;&gt;iOS开发峰会&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;iOS峰会仿佛Swift开发峰会，OC已经没人讲了。但是对于Swift，台下问嘉宾，Swift3升级遇到问题怎么办，嘉宾说我们不升3，升2.3，哈哈哈。&lt;/p&gt;
+
+&lt;p&gt;##Swift面向协议编程与Cocoa框架的邂逅&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;喵神讲了一下Swift里面新增加的协议扩展特性。 整个演讲主要是讲面向接口的设计方法。
+Swift增加了协议扩展之后，能力已经跟多继承没有太大区别了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##展望 Isomorphic Swift&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;主持人都没太明白Isomorphic Swift是什么意思。 听完大概就是前后端都用Swift来实现。
+主要介绍几个后端Swift框架，Kitura，Vapor，Perfect，Zewo。
+从benchmark看，swift的性能表现比nodejs要好，仅次于go。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##把玩编译器，Clang有意思&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这个主题有点难。 孙源科普了一下llvm，clang的概念。 同时演示了一下clang与xcode结合使用的三种方式，实现code
+lint，以及利用AST做一些hack的事情。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##IM 即时通讯技术在多应用场景下的技术实现，以及性能调优&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;leancloud的陈宜龙详细讲了IM的协议选择与性能优化，但是时间没安排好，导致部分内容没讲完。
+干货也很多，基本涉及了IM中常遇到的一些问题。
+1. 连接问题 轮询，长轮询，长连接 从流量上看，当然Websocket的长连接花费更少
+2. 通讯协议 XMPP，MQTT，私有协议 XMPP协议成熟，可利用的开源实现很多，但是耗流量，不是为移动场景设计。 MQTT协议简单，流量少，适合订阅+推送模式。针对IM场景需要做很多扩展。适合打车，朋友圈状态更新等场景。
+私有协议是主流IM采用的方式，要求有设计良好协议的能力，对设计者要求高。
+3. 假在线 双向ping pong机制
+4. 序列化 PB的序列化比json和xml更省流量和省电
+5. DNS污染 ip直连，http DNS
+6. 重连机制 精简心跳包，减少心跳次数，重连冷却&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##58同城App在React Native上的开发实践-iOS视角&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;彭飞主要分享了58同城在使用RN上的一些经验，有细节的，也有工程性的。
+1. RCT_EXPORT_MODULE(js_name)，RCT_REMAP_METHOD 设置别名，解决android和iOS类名的问题
+2. 覆盖methodQueue,实现自定义queue
+3. 载体页初始化参数解耦处理
+4. 单次回调用Callback，多次回调用EventListener
+5. js端和native端的异常处理策略
+6. 热更新采用基于common的diff。相当于除了common之外的全量更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##搜狗输入法性能优化实践&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;因为系统对输入法占用资源的限制，李腾杰的分享也是干货满满，从与android峰会的微信群对比，iOS峰会一直保持了很高的质量。
+搜狗主要分享了键盘调起速度和内存占用的优化，可操作性很强。
+1. 键盘调起速度 懒加载，不要阻塞主线程，避免额外操作，慎用autolayout，慎用NSDateFormatter，慎用[NSString sizeWithAttributes:]
+2. 内存占用 autoreleasepool使用，避免循环引用，读图方式优化，正确的缓存策略，降低内存峰值，内存文件映射，FastImageCache&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##Deep in iOS Testing&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这个主题没听完整，主要讲了一下iOS的自动化测试，monkey，以及中间会用到的一些工具。
+最后有个Q&amp;amp;A，问xcode8里面对UIAutomation的支持去掉了，自动化怎么做，回答是不升级xcode8.跟不升级swift3的回答同样简单粗暴，哈哈。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##安全那点事儿&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;本来想听点黑客的事情，但那是不可能在大会上讲的。
+微信的马松松首先科普了一下信息安全的演进，从原始社会一直讲到萨德导弹，中间各种图片梗好像听众都没接上，嘉宾估计很无奈，讲安全不能讲太细，简单的梗也没人懂，只能顺便黑一下csdn。
+结论是&lt;strong&gt;安全的最大问题在于人的意识问题&lt;/strong&gt;，对于开发者：安全能力是每一位开发者的基本能力，没有“银弹”!架构上最关健的一点是层层设防。
+然后举了几个通常我们认为的防御，普通开发者认为的安全在安全人员眼里都是很容易攻击的，甚至安全人员认为的安全也不一定是安全的，没有绝对的安全，最好代码有专业的安全人员审计。
+不过问嘉宾怎么在客户端存密码的时候，keychain依然是优先安全的方案。
+听完感觉开发者首先要更新自己的一些知识库，特别是有些传统加密算法因为发现有漏洞，已经被一些安全性更高的算法替代了，然后要有一些安全的常识，因为安全上有些问题如果你不知道，那就真的不知道。&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
